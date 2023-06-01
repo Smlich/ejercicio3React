@@ -1,12 +1,12 @@
-import './App.css';
-import HelloWorld from './components/HelloWorld';
+import React, { useState } from 'react';
 
 function App() {
+  const [msj, setearMensaje] = useState("(estado a cambiar)");
+
   return (
     <div className="App">
-      <header className="App-header">
-       <HelloWorld texto={'My Friend'}/> 
-      </header>
+      <h1>Hola mi amigo {msj}</h1>
+      <button onClick={() => setearMensaje("(estado cambiado)")}>cambiar estado</button>
     </div>
   );
 }
